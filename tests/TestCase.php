@@ -2,9 +2,9 @@
 
 namespace Concept7\ComposerHealth\Tests;
 
+use Concept7\ComposerHealth\ComposerHealthServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Concept7\ComposerHealth\ComposerHealthServiceProvider;
 
 class TestCase extends Orchestra
 {
