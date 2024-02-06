@@ -2,15 +2,15 @@
 
 namespace Concept7\ComposerHealth\Checks;
 
+use Illuminate\Support\Facades\Process;
 use Spatie\Health\Checks\Check;
 use Spatie\Health\Checks\Result;
-use Illuminate\Support\Facades\Process;
 
 class OutdatedCheck extends Check
 {
     public function run(): Result
     {
-        $result = Process::run("composer outdated -D --format=json");
+        $result = Process::run('composer outdated -D --format=json');
 
         $outdated = collect(json_decode($result->output(), true));
 
@@ -19,9 +19,9 @@ class OutdatedCheck extends Check
         }
 
         $packageNames = $outdated
-            ->pluck("name")
-            ->map(fn(string $packageName) => "`{$packageName}`")
-            ->join(", ", " and ");
+            ->pluck('name')
+            ->map(fn (string $packageName) => "`{$packageName}`")
+            ->join(', ', ' and ');
 
         return Result::make()
             ->meta($outdated->toArray())
