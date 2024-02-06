@@ -2,10 +2,10 @@
 
 namespace Concept7\ComposerHealth\Checks;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Process;
 use Spatie\Health\Checks\Check;
 use Spatie\Health\Checks\Result;
-use Illuminate\Support\Arr;
 
 class OutdatedCheck extends Check
 {
