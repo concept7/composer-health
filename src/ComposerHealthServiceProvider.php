@@ -2,7 +2,6 @@
 
 namespace Concept7\ComposerHealth;
 
-use Concept7\ComposerHealth\Commands\ComposerHealthCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
